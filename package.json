@@ -1,0 +1,36 @@
+{
+  "name": "657",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --config webpack.config.js",
+    "build": "webpack"
+  },
+  "repository": "git+https://github.com/zhangfaliang/react-HOC.git",
+  "author": "张发亮 <fl.zhang@8win.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhangfaliang/react-HOC/issues"
+  },
+  "homepage": "https://github.com/zhangfaliang/react-HOC#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.2.0",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.4.1",
+    "webpack-cli": "^2.0.13"
+  },
+  "dependencies": {
+    "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0"
+  }
+}
