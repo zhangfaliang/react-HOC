@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --config webpack.config.js",
-    "build": "webpack"
+    "dev": "webpack --mode development --module-bind js=babel-loader",
+    "build": "webpack --mode production --module-bind js=babel-loader"
   },
   "repository": "git+https://github.com/zhangfaliang/react-HOC.git",
   "author": "张发亮 <fl.zhang@8win.com>",
@@ -31,6 +32,9 @@
   },
   "dependencies": {
     "babel-loader": "^7.1.4",
-    "babel-polyfill": "^6.26.0"
+    "babel-polyfill": "^6.26.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "react-test-renderer": "^16.3.0"
   }
 }
