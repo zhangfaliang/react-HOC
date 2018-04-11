@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js run build
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js run start
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -42,16 +42,17 @@ npm manifest:
       "react-dom": "^16.3.0",
       "react-redux": "^5.0.7",
       "react-router": "^4.2.0",
-      "style-loader": "^0.20.3",
-      "webpack": "^4.4.1",
-      "webpack-cli": "^2.0.13"
+      "style-loader": "^0.20.3"
     },
     "dependencies": {
       "babel-loader": "^7.1.4",
       "babel-polyfill": "^6.26.0",
       "html-loader": "^0.5.5",
       "html-webpack-plugin": "^3.2.0",
-      "react-test-renderer": "^16.3.0"
+      "mini-css-extract-plugin": "^0.4.0",
+      "react-test-renderer": "^16.3.0",
+      "webpack": "4.2.0",
+      "webpack-cli": "^2.0.13"
     }
   }
 
@@ -1015,8 +1016,8 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.18.0.tgz#af2f3b88fa6f5c1e4c634d1a0f8eac4f55b395e3"
   
   babylon@^7.0.0-beta.30:
-    version "7.0.0-beta.42"
-    resolved "https://registry.yarnpkg.com/babylon/-/babylon-7.0.0-beta.42.tgz#67cfabcd4f3ec82999d29031ccdea89d0ba99657"
+    version "7.0.0-beta.44"
+    resolved "https://registry.yarnpkg.com/babylon/-/babylon-7.0.0-beta.44.tgz#89159e15e6e30c5096e22d738d8c0af8a0e8ca1d"
   
   balanced-match@^0.4.2:
     version "0.4.2"
@@ -2166,8 +2167,8 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/extend/-/extend-3.0.1.tgz#a755ea7bc1adfcc5a31ce7e762dbaadc5e636444"
   
   external-editor@^2.0.4, external-editor@^2.1.0:
-    version "2.1.0"
-    resolved "https://registry.yarnpkg.com/external-editor/-/external-editor-2.1.0.tgz#3d026a21b7f95b5726387d4200ac160d372c3b48"
+    version "2.2.0"
+    resolved "https://registry.yarnpkg.com/external-editor/-/external-editor-2.2.0.tgz#045511cfd8d133f3846673d1047c154e214ad3d5"
     dependencies:
       chardet "^0.4.0"
       iconv-lite "^0.4.17"
@@ -3583,6 +3584,13 @@ Lockfile:
   mimic-response@^1.0.0:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/mimic-response/-/mimic-response-1.0.0.tgz#df3d3652a73fded6b9b0b24146e6fd052353458e"
+  
+  mini-css-extract-plugin@^0.4.0:
+    version "0.4.0"
+    resolved "https://registry.yarnpkg.com/mini-css-extract-plugin/-/mini-css-extract-plugin-0.4.0.tgz#ff3bf08bee96e618e177c16ca6131bfecef707f9"
+    dependencies:
+      loader-utils "^1.1.0"
+      webpack-sources "^1.1.0"
   
   minimalistic-assert@^1.0.0:
     version "1.0.0"
@@ -5477,7 +5485,7 @@ Lockfile:
       commander "~2.15.0"
       source-map "~0.6.1"
   
-  uglifyjs-webpack-plugin@^1.2.4:
+  uglifyjs-webpack-plugin@^1.1.1:
     version "1.2.4"
     resolved "https://registry.yarnpkg.com/uglifyjs-webpack-plugin/-/uglifyjs-webpack-plugin-1.2.4.tgz#5eec941b2e9b8538be0a20fc6eda25b14c7c1043"
     dependencies:
@@ -5750,9 +5758,9 @@ Lockfile:
       source-list-map "^2.0.0"
       source-map "~0.6.1"
   
-  webpack@^4.4.1:
-    version "4.4.1"
-    resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.4.1.tgz#b0105789890c28bfce9f392623ef5850254328a4"
+  webpack@4.2.0:
+    version "4.2.0"
+    resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.2.0.tgz#a4f80807651a0e611bb09609600dc266262efcc1"
     dependencies:
       acorn "^5.0.0"
       acorn-dynamic-import "^3.0.0"
@@ -5770,7 +5778,7 @@ Lockfile:
       node-libs-browser "^2.0.0"
       schema-utils "^0.4.2"
       tapable "^1.0.0"
-      uglifyjs-webpack-plugin "^1.2.4"
+      uglifyjs-webpack-plugin "^1.1.1"
       watchpack "^1.5.0"
       webpack-sources "^1.0.1"
   
@@ -5918,9 +5926,9 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 2
+  Exit code: 1
   Command: sh
-  Arguments: -c webpack --mode production --module-bind js=babel-loader
+  Arguments: -c webpack --config webpack.config.js
   Directory: /Users/shinyzhang/test/REACT-HOC/react-HOC
   Output:
   
